@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YouTubePlayerKara
 {
-    class VideoSearch
+    class SearchVideo
     {
         //title video
         public string Title { get; set; }

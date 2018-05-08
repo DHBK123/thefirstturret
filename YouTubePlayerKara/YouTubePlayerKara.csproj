@@ -97,7 +97,7 @@
     <Compile Include="SearchList.Designer.cs">
       <DependentUpon>SearchList.cs</DependentUpon>
     </Compile>
-    <Compile Include="VideoSearch.cs" />
+    <Compile Include="SearchVideo.cs" />
     <EmbeddedResource Include="FullScreen.resx">
       <DependentUpon>FullScreen.cs</DependentUpon>
     </EmbeddedResource>
