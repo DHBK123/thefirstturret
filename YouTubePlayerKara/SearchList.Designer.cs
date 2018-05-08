@@ -32,11 +32,11 @@
             this.dtGridSearchView = new System.Windows.Forms.DataGridView();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.searchVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.thumbnailDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSearchView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchVideoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,7 @@
             this.dtGridSearchView.GridColor = System.Drawing.Color.DarkSlateGray;
             this.dtGridSearchView.Location = new System.Drawing.Point(12, 38);
             this.dtGridSearchView.Name = "dtGridSearchView";
+            this.dtGridSearchView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dtGridSearchView.Size = new System.Drawing.Size(776, 400);
             this.dtGridSearchView.TabIndex = 0;
             // 
@@ -84,33 +85,39 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // searchVideoBindingSource
+            // 
+            this.searchVideoBindingSource.DataSource = typeof(YouTubePlayerKara.SearchVideo);
+            // 
             // thumbnailDataGridViewImageColumn
             // 
+            this.thumbnailDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.thumbnailDataGridViewImageColumn.DataPropertyName = "Thumbnail";
             this.thumbnailDataGridViewImageColumn.HeaderText = "Thumbnail";
+            this.thumbnailDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.thumbnailDataGridViewImageColumn.MinimumWidth = 25;
             this.thumbnailDataGridViewImageColumn.Name = "thumbnailDataGridViewImageColumn";
             // 
             // titleDataGridViewTextBoxColumn
             // 
+            this.titleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
             this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
             // 
             // authorDataGridViewTextBoxColumn
             // 
+            this.authorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
             this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
             // 
             // urlDataGridViewTextBoxColumn
             // 
+            this.urlDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.urlDataGridViewTextBoxColumn.DataPropertyName = "Url";
             this.urlDataGridViewTextBoxColumn.HeaderText = "Url";
             this.urlDataGridViewTextBoxColumn.Name = "urlDataGridViewTextBoxColumn";
-            // 
-            // searchVideoBindingSource
-            // 
-            this.searchVideoBindingSource.DataSource = typeof(YouTubePlayerKara.SearchVideo);
             // 
             // SearchList
             // 
@@ -134,10 +141,10 @@
         private System.Windows.Forms.DataGridView dtGridSearchView;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.BindingSource searchVideoBindingSource;
         private System.Windows.Forms.DataGridViewImageColumn thumbnailDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn urlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource searchVideoBindingSource;
     }
 }
