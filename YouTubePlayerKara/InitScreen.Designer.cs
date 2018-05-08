@@ -37,6 +37,7 @@
             // 
             // lbInit
             // 
+            this.lbInit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbInit.AutoSize = true;
             this.lbInit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbInit.ForeColor = System.Drawing.Color.Blue;
@@ -48,6 +49,8 @@
             // 
             // btnAbout
             // 
+            this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAbout.Location = new System.Drawing.Point(363, 415);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(75, 23);
@@ -57,6 +60,8 @@
             // 
             // btnPlaySearch
             // 
+            this.btnPlaySearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPlaySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnPlaySearch.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnPlaySearch.Location = new System.Drawing.Point(215, 90);
@@ -69,6 +74,8 @@
             // 
             // btnFavorite
             // 
+            this.btnFavorite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFavorite.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnFavorite.Location = new System.Drawing.Point(215, 165);
             this.btnFavorite.Name = "btnFavorite";

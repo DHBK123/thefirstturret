@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace YouTubePlayerKara
 
         //Url path
         public string Url { get; set; }
+
+        //Thumbanil
+        public Image Thumbnail { get; set; }
 
     }
 }

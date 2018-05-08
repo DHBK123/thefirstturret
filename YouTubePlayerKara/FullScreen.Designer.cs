@@ -39,6 +39,9 @@
             // 
             // screen2
             // 
+            this.screen2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.screen2.Enabled = true;
             this.screen2.Location = new System.Drawing.Point(0, 0);
             this.screen2.Name = "screen2";
