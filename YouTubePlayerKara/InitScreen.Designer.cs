@@ -68,7 +68,7 @@
             this.btnPlaySearch.Name = "btnPlaySearch";
             this.btnPlaySearch.Size = new System.Drawing.Size(360, 60);
             this.btnPlaySearch.TabIndex = 2;
-            this.btnPlaySearch.Text = "PLAY LIST";
+            this.btnPlaySearch.Text = "TÌM KIẾM BÀI HÁT";
             this.btnPlaySearch.UseVisualStyleBackColor = true;
             this.btnPlaySearch.Click += new System.EventHandler(this.btnPlaySearch_Click);
             // 
@@ -81,7 +81,7 @@
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.Size = new System.Drawing.Size(360, 60);
             this.btnFavorite.TabIndex = 3;
-            this.btnFavorite.Text = "FAVORITES";
+            this.btnFavorite.Text = "DANH SÁCH ƯA THÍCH";
             this.btnFavorite.UseVisualStyleBackColor = true;
             // 
             // InitScreen

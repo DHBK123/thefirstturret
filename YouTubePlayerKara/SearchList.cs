@@ -42,7 +42,7 @@ namespace YouTubePlayerKara
             }
 
             searchVideoBindingSource.DataSource = _list;
-            
+
         }
     }
 }
