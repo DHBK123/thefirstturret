@@ -32,10 +32,9 @@
             this.seekBar = new System.Windows.Forms.TrackBar();
             this.btnPlay = new System.Windows.Forms.Button();
             this.volBar = new System.Windows.Forms.TrackBar();
-            this.screen1 = new AxShockwaveFlashObjects.AxShockwaveFlash();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.seekBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.screen1)).BeginInit();
             this.SuspendLayout();
             // 
             // seekBar
@@ -61,21 +60,21 @@
             this.volBar.Size = new System.Drawing.Size(104, 45);
             this.volBar.TabIndex = 3;
             // 
-            // screen1
+            // webBrowser1
             // 
-            this.screen1.Enabled = true;
-            this.screen1.Location = new System.Drawing.Point(0, 0);
-            this.screen1.Name = "screen1";
-            this.screen1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("screen1.OcxState")));
-            this.screen1.Size = new System.Drawing.Size(688, 388);
-            this.screen1.TabIndex = 4;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 29);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(524, 310);
+            this.webBrowser1.TabIndex = 4;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // MinScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.screen1);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.volBar);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.seekBar);
@@ -84,7 +83,6 @@
             this.Text = "MinScreen";
             ((System.ComponentModel.ISupportInitialize)(this.seekBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.volBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.screen1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +92,7 @@
         private System.Windows.Forms.TrackBar seekBar;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.TrackBar volBar;
-        private AxShockwaveFlashObjects.AxShockwaveFlash screen1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 
