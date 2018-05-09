@@ -23,6 +23,7 @@ namespace YouTubePlayerKara
         {
             InitializeComponent();
             URL = url.Replace("watch?v=", "embed/");
+            URL = URL.Replace("http", "https");
             URL += "?autoplay=1";
         }
 
@@ -42,7 +43,7 @@ namespace YouTubePlayerKara
             var embed = "<html><head>" +
             "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +
             "</head><body>" +
-            "<iframe width=\"300\" src=\"{0}\"" +
+            "<iframe width=\"489\" src=\"{0}\"" +
             "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
             "</body></html>";
             this.webBrowser1.DocumentText = string.Format(embed, URL);
