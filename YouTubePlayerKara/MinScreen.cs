@@ -17,19 +17,22 @@ namespace YouTubePlayerKara
         public MinScreen()
         {
             InitializeComponent();
-            btnPlay.Text = "Playing";
+
+
         }
         public MinScreen(string url)
         {
             InitializeComponent();
-            URL = url.Replace("watch?v=", "embed/");
-            URL = URL.Replace("http", "https");
-            URL += "?autoplay=1";
+
+                URL = url.Replace("watch?v=", "embed/");
+                URL = URL.Replace("https", "http");
+                URL += "?autoplay=1";
+                //URL += "&controls=0";
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            btnPlay.Text = "Paused";
+
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -41,12 +44,25 @@ namespace YouTubePlayerKara
         {
             base.OnLoad(e);
             var embed = "<html><head>" +
+
             "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +
             "</head><body>" +
-            "<iframe width=\"489\" src=\"{0}\"" +
-            "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
+            "<iframe width=\"870\" height=\"465\"  src=\"{0}\" allow = \"controls = 0\"" +
+            "frameborder = \"0\"  allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
             "</body></html>";
             this.webBrowser1.DocumentText = string.Format(embed, URL);
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            //MinScreen minScreen = new MinScreen();
+            this.Close();
+            //Form cur = Form.ActiveForm;
+            //cur.Visible = true;
+
+        }
+
     }
 }
+

@@ -19,9 +19,9 @@ namespace YouTubePlayerKara
 
         private void btnPlaySearch_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             SearchList _searchList = new SearchList();
-            _searchList.Visible = true; 
-            
+            _searchList.Visible = true;
         }
     }
 }

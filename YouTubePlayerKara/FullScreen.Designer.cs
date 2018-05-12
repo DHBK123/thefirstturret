@@ -43,10 +43,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.screen2.Enabled = true;
-            this.screen2.Location = new System.Drawing.Point(0, 0);
+            this.screen2.Location = new System.Drawing.Point(12, 3);
             this.screen2.Name = "screen2";
             this.screen2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("screen2.OcxState")));
-            this.screen2.Size = new System.Drawing.Size(800, 407);
+            this.screen2.Size = new System.Drawing.Size(776, 404);
             this.screen2.TabIndex = 0;
             // 
             // seekBar
