@@ -16,7 +16,7 @@ namespace YouTubePlayerKara
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InitScreen());
+            Application.Run(new MinScreen());
         }
     }
 }

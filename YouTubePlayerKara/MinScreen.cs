@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Google.Apis.Download;
+using YoutubeSearch;
 
 namespace YouTubePlayerKara
 {
@@ -47,7 +50,7 @@ namespace YouTubePlayerKara
 
             "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +
             "</head><body>" +
-            "<iframe width=\"870\" height=\"465\"  src=\"{0}\" allow = \"controls = 0\"" +
+            "<iframe width=\"800\" height=\"600\"  src=\"{0}\" allow = \"controls = 0\"" +
             "frameborder = \"0\"  allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
             "</body></html>";
             this.webBrowser1.DocumentText = string.Format(embed, URL);
@@ -63,6 +66,28 @@ namespace YouTubePlayerKara
 
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            VideoSearch items = new VideoSearch();
+            List<SearchVideo> _list = new List<SearchVideo>();
+            foreach (var item in items.SearchQuery(tbSearch.Text, 1))
+            {
+                SearchVideo _video = new SearchVideo();
+                byte[] imageDatas = new WebClient().DownloadData(item.Thumbnail);
+                using (MemoryStream ms = new MemoryStream(imageDatas))
+                {
+                    _video.Thumbnail = Image.FromStream(ms);
+                }
+                _list.Add(_video);
+            }
+            searchMinSBindingSource.DataSource = _list; 
+        }
+
+        private void gridSearch_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
     }
 }
 

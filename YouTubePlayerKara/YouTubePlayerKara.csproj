@@ -50,6 +50,9 @@
     <Reference Include="Google.Apis.Core, Version=1.33.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.Core.1.33.1\lib\net45\Google.Apis.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.33.1.1219, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.33.1.1219\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Apis.PlatformServices, Version=1.33.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.33.1\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
@@ -127,6 +130,7 @@
     <Compile Include="SearchList.Designer.cs">
       <DependentUpon>SearchList.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchMinS.cs" />
     <Compile Include="SearchVideo.cs" />
     <EmbeddedResource Include="FullScreen.resx">
       <DependentUpon>FullScreen.cs</DependentUpon>
@@ -150,6 +154,7 @@
       <DependentUpon>SearchList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SearchMinS.datasource" />
     <None Include="Properties\DataSources\SearchVideo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
