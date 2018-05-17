@@ -37,10 +37,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.gridSearch = new System.Windows.Forms.DataGridView();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.thumbnailDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.searchMinSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.searchVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.seekBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volBar)).BeginInit();
@@ -92,7 +92,7 @@
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBack.Location = new System.Drawing.Point(927, 634);
+            this.btnBack.Location = new System.Drawing.Point(1042, 634);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(122, 47);
             this.btnBack.TabIndex = 6;
@@ -123,6 +123,19 @@
             this.gridSearch.Size = new System.Drawing.Size(228, 571);
             this.gridSearch.TabIndex = 7;
             // 
+            // thumbnailDataGridViewImageColumn
+            // 
+            this.thumbnailDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.thumbnailDataGridViewImageColumn.DataPropertyName = "Thumbnail";
+            this.thumbnailDataGridViewImageColumn.HeaderText = "Thumbnail";
+            this.thumbnailDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.thumbnailDataGridViewImageColumn.MinimumWidth = 35;
+            this.thumbnailDataGridViewImageColumn.Name = "thumbnailDataGridViewImageColumn";
+            // 
+            // searchMinSBindingSource
+            // 
+            this.searchMinSBindingSource.DataSource = typeof(YouTubePlayerKara.SearchMinS);
+            // 
             // tbSearch
             // 
             this.tbSearch.Location = new System.Drawing.Point(821, 12);
@@ -141,19 +154,6 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // thumbnailDataGridViewImageColumn
-            // 
-            this.thumbnailDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.thumbnailDataGridViewImageColumn.DataPropertyName = "Thumbnail";
-            this.thumbnailDataGridViewImageColumn.HeaderText = "Thumbnail";
-            this.thumbnailDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.thumbnailDataGridViewImageColumn.MinimumWidth = 35;
-            this.thumbnailDataGridViewImageColumn.Name = "thumbnailDataGridViewImageColumn";
-            // 
-            // searchMinSBindingSource
-            // 
-            this.searchMinSBindingSource.DataSource = typeof(YouTubePlayerKara.SearchMinS);
-            // 
             // searchVideoBindingSource
             // 
             this.searchVideoBindingSource.DataSource = typeof(YouTubePlayerKara.SearchVideo);
@@ -164,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1179, 681);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.gridSearch);
